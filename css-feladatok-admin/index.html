@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header--dark">
+        
+        <h3 class="header__title">Admin Page</h3>
+        <button class="menu__btn"><i class="fa fa-bars"></i></button>
+        <div class="header__search">
+            <input type="text" class="search__input" placeholder="Search for...">
+            <button class="search__btn"><i class="fa fa-search"></i></button>
+            <button class="user__btn"><i class="fa fa-user"></i> <i class="fa fa-caret-down"></i></button>
+        </div>
+        
+    </header>
+    <main>
+        
+            <div class="menu">
+                <aside>
+                    <nav class="main__nav">
+                        <ul class="nav__ul">
+                            <li class="nav__group--title">CORE</li>
+                            <li><span class="list__icon"><i class="fa fa-tachometer"></i></span>
+                                <a href="dashboard.html">Dashboard</a></li>
+                            <li class="nav__group--title">INTERFACE</li>
+                            <li><i class="fa fa-columns" aria-hidden="true"></i>
+                                <a href="layouts.html">Layouts</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </li>
+                            <li><i class="fa fa-bookmark" aria-hidden="true"></i>
+                                <a href="pages.html">Pages</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                            <li class="nav__group--title">ADDONS</li>
+                            <li><i class="fa fa-area-chart" aria-hidden="true"></i>
+                                <a href="charts.html">Charts</a></li>
+                            <li><i class="fa fa-table" aria-hidden="true"></i>
+                                <a href="tables">Tables</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+
+            <section class="content">
+                <h1>Dashboard</h1>
+                <div class="main__breadcrumb">Dashboard</div>
+                <div class="main__cards">
+                    <div class="main__card main__card--blue">
+                        <div class="card__top">Primary Card</div>
+                        <div class="card__bottom">View Details <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="main__card main__card--yellow">
+                        <div class="card__top">Warning Card</div>
+                        <div class="card__bottom">View Details <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="main__card main__card--green">
+                        <div class="card__top">Success Card</div>
+                        <div class="card__bottom">View Details <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="main__card main__card--red">
+                        <div class="card__top">Danger Card</div>
+                        <div class="card__bottom">View Details <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </section>
+          </main>
+
+</body>
+
+</html>

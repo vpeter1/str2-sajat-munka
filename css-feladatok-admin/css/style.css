@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header {
+    padding: 1rem;
+} */
+
+/* .menu { grid-area: menu;}
+.main__cards {grid-area: content;} */
+body {
+    min-width: 480px;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+            'menu content';
+    grid-template-columns: 12rem 1fr;
+    /* background-color: silver; */
+    margin: 0 1rem 0 0;
+    
+}
+
+aside {
+    margin: 0;
+}
+h1 {
+    margin: .5rem 0 .5rem 0;
+}
+.main__nav {
+    /* background-color: rgb(33, 37, 41); */
+}
+
+.menu {
+    background-color: rgb(33, 37, 41);
+    margin: 0 1rem 0 0;
+    color: rgb(200 , 200, 200);
+    padding-left: 0;
+}
+.nav__ul {
+    padding-inline-start: 1rem;
+}
+.nav__ul .fa {
+    padding-right: 1rem;
+    color: rgb(150, 150, 150);
+    }
+
+.fa-angle-right {
+    /* display: inline; */
+    float: right;
+    cursor: pointer;
+    /* display: inline-block */
+}
+
+.nav__group--title {
+    font-size: .8rem;
+    padding: 1rem 0;
+    color: gray;
+}
+
+.nav__ul {
+    list-style: none;
+}
+.nav__ul li {
+    padding: .75rem 0;
+}
+
+.nav__ul a {
+    text-decoration: none;
+    color: rgb(140, 140, 140);
+
+}
+
+.header--dark {
+    background-color: rgb(51, 57, 64);
+    color: rgb(236, 236, 236);
+    padding: .5rem
+    
+}
+
+.header__title {
+    display: inline;
+    font-size: 1.25rem;
+    text-align: left;
+    padding-left: 1rem;
+}
+.menu__btn {
+    background-color: rgb(51, 57, 64);
+    color: rgb(150, 156, 161);
+    font-size: 1.2rem;
+    border: none;
+    padding: .375rem .75rem;
+    cursor: pointer; 
+    position: relative; 
+    left: 0;
+}
+
+div.header__search {
+    display: inline;
+    float: right;
+}
+
+.search__input {
+    /* border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; */
+    border: none;
+    border-radius: 4px 0 0 4px;
+    padding: .375rem .75rem;
+    font-size: 1.2rem;
+    width: 9rem;
+}
+
+.search__input:hover {
+    border:  1px solid rgb(128,189,25);
+    transition-property: border color;
+    transition-duration: .15s;
+}
+
+.search__btn {
+    background-color: rgb(0, 123, 255);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: .375rem 0.75rem;
+    cursor: pointer; 
+    position: relative; 
+    left: -.375rem; 
+}
+.user__btn {
+    background-color: rgb(51, 57, 64);
+    color: rgb(150, 156, 161);
+    font-size: 1.2rem;
+    border: none;
+    padding: .375rem .75rem;
+    cursor: pointer;  
+}
+.user__btn:hover, .menu__btn:hover, .nav__ul a:hover, .nav__ul .fa:hover {
+    color: white;
+}
+.search__btn:hover {
+    background-color: rgb(0, 100, 255);
+    transition: .3s; 
+}
+
+.main__breadcrumb {
+    background-color: rgb(200, 200, 200);
+    color: gray;
+    border-radius: .25rem;
+    padding: 1rem 1.5rem;
+    
+}
+.main__cards {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+    .main__cards {
+        flex-direction: column;
+    }
+    
+    
+    .nav__ul a, .nav__group--title {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+    main {
+        grid-template-columns: 90px 1fr;
+    }
+}
+.main__card {
+    width: 100%;
+    /* display: inline-block; */
+    border-radius: .25rem;
+    color: white;
+    margin: 1rem 0 0 0;
+    
+}
+
+.card__top {
+/*  border-radius: .25rem .25rem 0 0;*/
+    height: 4.5rem;
+    text-align: left;
+    padding: 1.5rem 0 0 1.5rem;
+    cursor: pointer; 
+
+}
+
+.card__bottom {
+      /*  border-radius: 0 0 .25rem .25rem; */
+    height: 3rem;
+    font-size: .8rem;
+    text-align: left;
+    padding: .8rem 1rem 0 1.5rem;
+    cursor: pointer; 
+    }
+
+.main__card:hover {
+    transition: .3s;
+}
+
+.main__card--blue {
+    background-color: rgb(0, 123, 255);
+    border: 1px solid rgb(24, 108, 180);
+    /* transition: .3s;  */
+}
+.main__card--blue .card__bottom {
+    background-color: rgb(0, 119, 247);
+    border-top: 1px solid rgb(24, 108, 180);
+}
+
+.main__card--yellow {
+    background-color: rgb(255, 193, 7);
+    border: 1px solid rgb(202, 165, 57);
+}
+.main__card--yellow .card__bottom {
+    background-color: rgb(248, 186, 6);
+    border-top: 1px solid rgb(202, 165, 57);
+}
+
+.main__card--green {
+    background-color: rgb(40, 167, 69);
+    border: 1px solid rgb(65, 131, 75);
+}
+.main__card--green .card__bottom {
+    background-color: #26a342;
+    border-top: 1px solid rgb(65, 131, 75);
+}
+
+.main__card--red {
+    background-color: rgb(220, 53, 69);
+    border: 1px solid rgb(145, 62, 69);
+}
+.main__card--red .card__bottom {
+    background-color: rgb(215, 50, 67);
+    border-top: 1px solid rgb(145, 62, 69);
+}
+
+
+.main__card--blue .card__top:hover  {
+    background-color: rgb(0, 100, 255);
+    transition: .3s; 
+}
+.main__card--blue .card__bottom:hover  {
+    background-color: rgb(0, 100, 255);
+    transition: .3s; 
+}
+.main__card--yellow .card__top:hover  {
+    background-color: rgb(200, 160, 30);
+    transition: .3s; 
+}
+.main__card--yellow .card__bottom:hover  {
+    background-color: rgb(200, 160, 30);
+    transition: .3s; 
+}
+.main__card--green .card__top:hover  {
+    background-color: rgb(50, 130, 75);
+    transition: .3s; 
+}
+.main__card--green .card__bottom:hover  {
+    background-color: rgb(50, 130, 75);
+    transition: .3s; 
+}
+.main__card--red .card__top:hover  {
+    background-color: rgb(145, 62, 70);
+    transition: .3s; 
+}
+.main__card--red .card__bottom:hover  {
+    background-color: rgb(145, 62, 70)
+}
