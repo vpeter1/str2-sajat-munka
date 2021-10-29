@@ -1,0 +1,98 @@
+* {box-sizing: border-box}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+    padding: 0;
+    
+}
+
+.btn {
+    border: none;
+    cursor: pointer;    
+    opacity: 0.7;
+    /* margin: .5rem */
+    
+  }
+  
+.btn:hover {
+    opacity:1;
+  }
+
+.btn_close {
+    color: gray;
+    float: right;
+    font-size: 2rem;
+    margin: -1rem;
+    }
+
+.btn_close:hover, .btn_close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+    }
+  
+.btn_ok, .btn_cancel {
+    width: 5rem;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+
+.btn_ok {
+    background-color: green;
+    color: white;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    }
+
+.btn_cancel {
+    float: right;
+    background-color: red;
+    color: white;
+  }
+
+.buttons { display: block; text-align: right; }
+/* .buttons .btn { float: none; } */
+.buttons::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+.modal_content {
+    background-color: white;
+    /* margin: 15% auto 15% auto; */
+    border: 1px solid gray;
+    width: 50%; 
+    padding: 2rem;
+    text-align: left;
+    /* min-width: 300px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+.modal_box {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+  
+@media screen and (max-width: 560px) {
+    .modal_content { width: 100%; }
+  }
+   
+@media screen and (max-width: 300px) {
+    .btn_ok, .btn_cancel {
+       width: 100%;
+    }
+} 

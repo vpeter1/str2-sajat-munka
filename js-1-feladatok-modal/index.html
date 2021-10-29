@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h2>Modal Project</h2>
+    <button id="btn_open" >Click me to Modal!</button>
+    <input type="button" value="Click me to Modal! (fadeIn) UNDER CONSTRUCTION" onclick="showModal('modal')">
+
+    <div id="modal" class="modal_box" >
+        <div class="modal_content">
+            <span class="btn_close">&times;</span>
+            <h2>CSSScript.com</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nesciunt porro dolores accusantium provident
+                aspernatur sequi animi, accusamus sint tempore saepe sed cupiditate, veritatis modi consequuntur quasi
+                recusandae alias! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nesciunt porro dolores
+                accusantium provident aspernatur sequi animi, accusamus sint tempore saepe sed cupiditate, veritatis
+                modi consequuntur quasi recusandae alias!</p>
+            <div class="buttons">
+                <button class="btn btn_ok">Okay</button>
+                <button class="btn btn_cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let modal = document.getElementById("modal");
+
+        let btnOpen = document.getElementById("btn_open");
+
+        let btnOkay = document.getElementsByClassName("btn_ok")[0];
+
+        let btnCancel = document.getElementsByClassName("btn_cancel")[0];
+
+        let span = document.getElementsByClassName("btn_close")[0];
+
+        btnOpen.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        btnOkay.onclick = function () {
+            modal.style.display = "none";
+        }
+        btnCancel.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        
+
+
+
+       /*  function showModal(id) {
+            $("#" + id).fadeIn('slow');
+        }
+        function hideModal(id) {
+            $("#" + id).fadeOut('slow');
+        } */
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
