@@ -1,0 +1,138 @@
+* {
+   box-sizing: border-box;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+body {
+    background-color: rgb(0, 128, 58);
+}
+
+h1, h2, h3, #clock, .info {
+    /*background-color: gray;*/
+    text-align: center;
+    color: wheat;
+    user-select: none;
+}
+
+#clock {
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: darkgray;*/
+    margin: 1rem auto;
+    width: 600px;
+    /*height: 200px;*/
+    padding: 0;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.flip-card-front:hover {
+    cursor: pointer;
+}
+
+.flip-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 100px;
+    height: 150px;
+    font-size: 80px;
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    perspective: 1000px;
+  }
+  
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+   
+.flip {
+    transform: rotateY(180deg);
+  }
+
+.match {
+  color : green;
+  text-shadow: darkslategray 5px 5px 10px;
+  border: 3px solid darkslategray;
+    
+}
+  
+.flip-card-front, .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    user-select: none;
+  }
+  
+
+.flip-card-front {
+    background-color: darkslategray;
+    color: wheat;
+  }
+  
+
+.flip-card-back {
+    background-color: whitesmoke;
+    /* color: black; */
+    transform: rotateY(180deg);
+} 
+
+.message {
+    
+    width: 200px auto;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 4rem;
+    
+    color: white;
+}
+
+.nextmove {
+    
+    width: 200px auto;
+   
+    text-align: center;
+    font-size: .9rem;
+    
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: darkgray;*/
+    margin: 1rem auto;
+    width: 200px;
+    height: 4rem;
+    padding: 0;
+    gap: 5px;
+}
+
+.btn {
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: darkslategray;
+    color: white;
+}
