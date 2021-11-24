@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game of Thrones</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <main>
+    <div id="container">
+    </div>
+  </main>
+
+  <aside>
+    <div class="topsticky">
+
+      <div class="title">
+        GAME OF THRONES
+      </div>
+
+      <div class="img">
+        <img src="./assets/pictures/got_logo_main_placeholder_small.jpg" width="270" object-fit: contain>
+      </div>
+
+
+      <div class="house"></div>
+
+      <div class="name"></div>
+
+      <div class="bio"></div>
+
+    </div>
+
+    <div class="search-container">
+
+      <input type="text" id="myInput" onkeyup="charSearch()" placeholder="Search/filter for character.." title="Type in a name">
+
+      <!-- <form action="/action_page.php">
+        <input type="text" placeholder="Search for character..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form> -->
+    </div>
+    <div class="audio">
+      <audio loop controls>
+        <source src="./assets/audio/got_main_title.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+  </aside>
+
+</body>
+
+<script src="./js/got.js"></script>
+
+
+</html>

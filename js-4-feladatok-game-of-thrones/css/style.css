@@ -1,0 +1,142 @@
+@font-face {
+  font-family: gotFont; 
+  src:url('/fonts/Game of Thrones.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif
+}
+
+body {
+  display: grid;
+  grid-template-areas: 'main aside';
+  grid-template-columns: 1fr 300px;
+  margin: 0;
+  padding: 0;
+  min-width: 480px;
+}
+
+main {
+  display: flex;
+  float: left;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../assets/site/mapblue.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+aside {
+  float:right;
+  background-color: rgb(63, 63, 63);
+  color: white;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.cell {
+  width: 90px;
+  height: 90px;
+  opacity: 0.8;
+  cursor: pointer; 
+  text-align: center;
+  font-size: .5rem;
+  }
+.cell:hover {
+  opacity: 1;
+  border: 5px solid goldenrod;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  }
+
+.title {
+  display: flex;
+  font-family: 'gotFont', sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+    
+}
+.topsticky {
+  position: sticky;
+  top: 0;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem ;
+  height: 190px;
+}
+
+.name {
+  float: left;
+  padding: 0 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+.house {
+  float: right;
+  padding: 0 1rem;
+  height: 35px;
+}
+
+.selected {
+  color : rgb(95, 26, 26);
+  opacity: 1.0;
+  font-weight: 900;
+  font-size: 0.6rem;
+  text-shadow: darkslategray 5px 5px 5px;
+  border: 5px solid goldenrod;
+  border-radius: 50%;
+}
+
+.bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 300px;
+}
+
+.search-container {
+  position: fixed;
+  bottom: 4rem;
+  right: 0;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  
+}
+
+.search input[type=text] {
+  padding: 1rem;
+  border: none;
+  
+}
+
+#myInput {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem; 
+  width: 300px;
+}
