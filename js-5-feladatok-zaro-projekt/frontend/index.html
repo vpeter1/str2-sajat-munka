@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <p id="messageSuccess" class="bg-success text-white text-center">DATABASE UPDATED</p>
+    <p id="messageValidation" class="bg-danger text-white text-center">DATA VALIDATION FAILED!</p>
+    <p id="messageDelete" class="bg-danger text-white text-center">USER DELETED FROM DATABASE!</p>
+    <h1>
+        <p class="text-center mt-3">USERS DATABASE ADMIN PAGE</p>
+    </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5">
+                <button id="getDataBtn" class="btn-block btn-primary">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    Get Users
+                </button>
+            </div>
+            <div class="col-5">
+                <button onclick="document.getElementById('id01').style.display='block'" id="createUserBtn"
+                    class="btn-block btn-success">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    Create New User
+                </button>
+                <div class="col-1"></div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <table id="userTable" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>E-mail</th>
+                            <th>Address</th>
+                            <th>actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <form id="newUserForm" class="modal-content" onsubmit="createNewUser()">
+            <div class="container">
+                <h1>Create User</h1>
+                <p>Please fill in this form to create a new user.</p>
+                <hr>
+                <label for="name"><b>Name</b></label>
+                <input id="name" type="text" placeholder="Enter Name (format: Firstname Lastname)" name="name" required
+                    pattern="^[A-Z][a-z]*\s\w*$">
+
+                <label for="email"><b>Email</b></label>
+                <input id="email" type="text" placeholder="Enter Email" name="email" required
+                    pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+
+                <label for="address"><b>Address</b></label>
+                <input id="address" type="text" placeholder="Enter Address (format: Number Streetname)" name="address"
+                    required pattern="^\d{1,5}\s[\w*\s]{0,50}$">
+
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <button type="submit" class="createuserbtn">Create User</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            /* $('.btn-success').tooltip({ title: "Refresh", trigger: "hover" }); */
+            $('.btn-warning').tooltip({ title: "Edit", trigger: "hover" });
+            $('.btn-danger').tooltip({ title: "Delete", trigger: "hover" });
+        });
+    </script> -->
+    <script src="./js/main.js"></script>
+
+    <!-- <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script> -->
+
+
+</body>
+
+</html>
