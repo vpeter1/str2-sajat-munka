@@ -1,0 +1,195 @@
+@use 'colors';
+@use 'fonts';
+@use 'mixins';
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {    
+    background-image: url("../img/bg-pattern.png"), linear-gradient(to right, colors.$gradient-left, colors.$gradient-right);
+    font-family: fonts.$font-header;
+}
+
+header h1, .bg-image h1 {
+     color: colors.$heading-color-ondark;
+}
+
+h1, h4 {
+     font-family: fonts.$font-heading;
+}
+
+p {
+     font-family: fonts.$font-paragraph;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: colors.$navbar-background !important;
+  transition: background-color 200ms linear;
+}
+
+.navbar-fixed-top.scrolled .navbar-brand1 {
+    color: colors.$link-onlight;
+
+    &:hover {
+       color: colors.$linkhover-onlight;
+    text-decoration: underline; 
+    }
+}
+
+.navbar-fixed-top.scrolled .nav-link1 {
+    color: colors.$link-onlight;
+
+    &:hover {
+      color: colors.$linkhover-onlight;
+    text-decoration: underline;  
+    }
+}
+
+.navbar-nav{
+    color: colors.$link-ondark;
+}
+
+.navbar-brand1 {
+    color: colors.$link-ondark;
+
+    &:hover {
+    color: colors.$linkhover-ondark;
+    text-decoration: none;
+    }
+}
+
+.nav-link1 {
+    color: colors.$link-ondark;
+    padding: .5rem;
+
+    &:hover {
+      color: colors.$linkhover-ondark;
+    text-decoration: none;
+    padding: .5rem;  
+    }
+}
+
+#download {
+    background-color: colors.$dlsection-background;
+}
+
+.btn {
+    @include mixins.btn-unique(pill, colors.$pillbtn-background, colors.$link-onlight);
+}
+
+.img-container {
+  position: relative;
+  top: 3rem;   
+}
+
+@media screen and (max-width: 768px) {
+    .img-container {  
+    top: 0;
+    }
+}
+
+.image1 {
+  position: absolute;
+  top: 0;
+  height: 400px;
+}
+
+.image2 {
+  position: relative;
+  top: 0;
+  height: 300px;
+}
+
+.store-button {
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;  
+    }
+}
+
+.card-icons {
+    color: colors.$card-icons;
+}
+
+.bg-image {    
+    background-image: url("../img/bg-cta.jpg");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  font-size: 0;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: colors.$img-overlay-bg;
+  z-index: 0;
+}
+
+.footer1 {
+    background-color: colors.$footer1-bg;
+    opacity: 0.9;
+
+    &:hover {
+    opacity: 1;
+    }
+}
+
+footer {
+    background-color: colors.$footer-bg;
+    font-family: fonts.$font-footer;
+}
+
+.social-media {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+
+  &:hover {
+    opacity: 0.9;
+    color: colors.$social-media-hover;
+    text-decoration: none 
+  }
+}
+
+.fa-facebook {
+  background: colors.$facebook-color;
+  color: colors.$social-media-color;
+}
+
+.fa-twitter {
+  background: colors.$twitter-color;
+  color: colors.$social-media-color;
+}
+
+.fa-google {
+  background: colors.$google-color;
+  color: colors.$social-media-color;
+}
+
+a {
+    font-size: small;
+    &:hover {
+     color: colors.$link-ondark;   
+    }
+}
+
+.footer-link {
+    color: colors.$footer-link;
+    cursor: pointer;    
+}

@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Lato:wght@300&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background-image: url("../img/bg-pattern.png"), linear-gradient(to right, #da2431, #7d4397);
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+header h1, .bg-image h1 {
+  color: #fff;
+}
+
+h1, h4 {
+  font-family: "Catamaran", Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #eee !important;
+  transition: background-color 200ms linear;
+}
+
+.navbar-fixed-top.scrolled .navbar-brand1 {
+  color: #222;
+}
+.navbar-fixed-top.scrolled .navbar-brand1:hover {
+  color: #7d4397;
+  text-decoration: underline;
+}
+
+.navbar-fixed-top.scrolled .nav-link1 {
+  color: #222;
+}
+.navbar-fixed-top.scrolled .nav-link1:hover {
+  color: #7d4397;
+  text-decoration: underline;
+}
+
+.navbar-nav {
+  color: #fdcc52;
+}
+
+.navbar-brand1 {
+  color: #fdcc52;
+}
+.navbar-brand1:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link1 {
+  color: #fdcc52;
+  padding: 0.5rem;
+}
+.nav-link1:hover {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+#download {
+  background-color: #fdcc52;
+}
+
+.btn--pill {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 10rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  box-shadow: none;
+  outline: none;
+}
+.btn--pill:hover {
+  /* background-color: color.scale($background, $lightness: 20%); */
+  background-color: #fdcc52;
+  border: 1px solid #fdcc52;
+  color: #222;
+  transition: background-color 300ms linear;
+}
+
+.img-container {
+  position: relative;
+  top: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .img-container {
+    top: 0;
+  }
+}
+.image1 {
+  position: absolute;
+  top: 0;
+  height: 400px;
+}
+
+.image2 {
+  position: relative;
+  top: 0;
+  height: 300px;
+}
+
+.store-button {
+  opacity: 0.8;
+}
+.store-button:hover {
+  opacity: 1;
+}
+
+.card-icons {
+  color: #ba2f58;
+}
+
+.bg-image {
+  background-image: url("../img/bg-cta.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  font-size: 0;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.3);
+  z-index: 0;
+}
+
+.footer1 {
+  background-color: #fdc740;
+  opacity: 0.9;
+}
+.footer1:hover {
+  opacity: 1;
+}
+
+footer {
+  background-color: #222222;
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+}
+
+.social-media {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.social-media:hover {
+  opacity: 0.9;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: #fff;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: #fff;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: #fff;
+}
+
+a {
+  font-size: small;
+}
+a:hover {
+  color: #fdcc52;
+}
+
+.footer-link {
+  color: #888;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
